@@ -2,7 +2,53 @@
 
 $mainFont: Roboto,
 sans-serif;
+$secondaryColor: #ff6a3f;
+$mainColor: #ffffff;
+$fontColor: #000000;
+main {
+    width: 80%;
+}
+
 body {
     font-family: $mainFont;
     margin: 0;
+    color: $fontColor;
+    display: grid;
+    grid-template-columns: 10% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
+    grid-template-rows: 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 8% 12%;
+}
+
+.header {
+    width: 80%;
+    background-color: forestgreen;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.description {
+    background-color: yellow;
+    width: 100%;
+}
+
+.price {
+    background-color: red;
+    width: 100%;
+}
+
+.features {
+    background-color: orange;
+    width: 100%;
+}
+
+.buttons {
+    background-color: purple;
+    width: 100%;
+}
+
+.leftNavigation {
+    width: 20%;
+    background-color: lightblue;
 }
