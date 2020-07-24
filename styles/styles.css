@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* font-family: 'Roboto', sans-serif; */
 body {
   width: 100%;
@@ -11,6 +12,7 @@ body {
       grid-template-columns: 20% 80%;
   -ms-grid-rows: 20% 80%;
       grid-template-rows: 20% 80%;
+  /* Verificar que hacia el final y sin la existencia del grid implícito esto siga funcionando OK */
 }
 
 header {
@@ -27,18 +29,20 @@ header {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
-  -webkit-box-pack: spa;
-      -ms-flex-pack: spa;
-          justify-content: spa;
+  -ms-grid-rows: 33.3% 33.3% 33.3%;
+      grid-template-rows: 33.3% 33.3% 33.3%;
 }
 
 header nav {
-  /*   height: auto;*/
-  width: 100%;
+  /* height: 100px; */
+  /* width: 100%; */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% 10% 10% 10% 10% 10% 10%;
       grid-template-columns: 40% 10% 10% 10% 10% 10% 10%;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   gap: 12px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -88,5 +92,45 @@ nav .nav__icon {
   -ms-grid-column-span: 1;
   grid-column: 6/7;
   cursor: pointer;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000000;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 11% 11% 11% 11% 11% 11% 11% 11% 12%;
+      grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 12%;
+  -ms-grid-columns: 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
+      grid-template-columns: 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
+}
+
+.main__section {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2/7;
+}
+
+.leftNavigation {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 /*# sourceMappingURL=styles.css.map */

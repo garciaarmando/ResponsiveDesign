@@ -14,6 +14,7 @@ body {
     display: grid;
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
+    /* Verificar que hacia el final y sin la existencia del grid implícito esto siga funcionando OK */
 }
 
 header {
@@ -24,14 +25,15 @@ header {
     grid-row: 1/2;
     display: grid;
     align-content: center;
-    justify-content: spa;
+    grid-template-rows: 33.3% 33.3% 33.3%;
 }
 
 header nav {
-    /*   height: auto;*/
-    width: 100%;
+    /* height: 100px; */
+    /* width: 100%; */
     display: grid;
     grid-template-columns: 40% 10% 10% 10% 10% 10% 10%;
+    grid-row: 2/3;
     gap: 12px;
     align-items: center;
     justify-items: center;
@@ -69,4 +71,29 @@ nav .nav__icon {
     background-size: contain;
     grid-column: 6/7;
     cursor: pointer;
+}
+
+header nav a {
+    text-decoration: none;
+    color: $fontColor;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: 11% 11% 11% 11% 11% 11% 11% 11% 12%;
+    grid-template-columns: 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
+}
+
+.main__section {
+    grid-row: 2/3;
+    grid-column: 2/7;
+}
+
+.leftNavigation {
+    grid-column: 1/2;
+    grid-row: 2/3;
 }
