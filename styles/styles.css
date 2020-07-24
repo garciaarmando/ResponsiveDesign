@@ -52,30 +52,34 @@ nav .nav__home {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
+  cursor: pointer;
 }
 
-.nav__product {
+nav .nav__product {
   font-size: 20px;
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
+  cursor: pointer;
 }
 
-.nav__services {
+nav .nav__services {
   font-size: 20px;
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+  cursor: pointer;
 }
 
-.nav__FAQ {
+nav .nav__FAQ {
   font-size: 20px;
   -ms-grid-column: 5;
   -ms-grid-column-span: 1;
   grid-column: 5/6;
+  cursor: pointer;
 }
 
-.nav__icon {
+nav .nav__icon {
   background-image: url(/assets/shopping_cart.png);
   width: 20px;
   height: 20px;
@@ -83,5 +87,6 @@ nav .nav__home {
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-column: 6/7;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

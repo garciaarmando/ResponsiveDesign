@@ -41,27 +41,32 @@ header nav {
 nav .nav__home {
     font-size: 20px;
     grid-column: 2/3;
+    cursor: pointer;
 }
 
-.nav__product {
+nav .nav__product {
     font-size: 20px;
     grid-column: 3/4;
+    cursor: pointer;
 }
 
-.nav__services {
+nav .nav__services {
     font-size: 20px;
     grid-column: 4/5;
+    cursor: pointer;
 }
 
-.nav__FAQ {
+nav .nav__FAQ {
     font-size: 20px;
     grid-column: 5/6;
+    cursor: pointer;
 }
 
-.nav__icon {
+nav .nav__icon {
     background-image: url(/assets/shopping_cart.png);
     width: 20px;
     height: 20px;
     background-size: contain;
     grid-column: 6/7;
+    cursor: pointer;
 }
