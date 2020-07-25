@@ -1,13 +1,18 @@
 @charset "UTF-8";
 /* font-family: 'Roboto', sans-serif; */
 body {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   font-family: Roboto, sans-serif;
   margin: 0;
   color: #000000;
   display: -ms-grid;
   display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-columns: 20% 80%;
       grid-template-columns: 20% 80%;
   -ms-grid-rows: 20% 80%;
@@ -97,6 +102,8 @@ nav .nav__icon {
 header nav a {
   text-decoration: none;
   color: #000000;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 main {
@@ -116,13 +123,186 @@ main {
       grid-template-columns: 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
 }
 
-.main__section {
+main .main__section {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 8;
+  grid-column: 2/10;
+}
+
+.main__section .main__description {
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 80%;
+      grid-template-rows: 20% 80%;
+  color: #000000;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__description .main__description__title {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: auto;
+  height: auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.main__description .description_paragraph {
+  font-size: 15px;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  font-size: 16px;
+}
+
+main .main__price {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4/6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 5;
+  grid-column: 2/7;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 40% 60%;
+      grid-template-rows: 40% 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main__price .main__price-amount {
+  font-size: 20px;
+  font-weight: bold;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: 100%;
+}
+
+.main__price .main__price-shipping {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  font-size: 15px;
+  width: 100%;
+  font-size: 16px;
+}
+
+main .features {
+  width: 100%;
+  height: 100%;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  grid-row: 6/9;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 10;
+  grid-column: 2/12;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (33.3%)[3];
+      grid-template-columns: repeat(3, 33.3%);
+  -ms-grid-rows: (33.3%)[3];
+      grid-template-rows: repeat(3, 33.3%);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features .features__title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.features .features__camera {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 16px;
+}
+
+.features .features__sensor {
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   -ms-grid-column: 2;
-  -ms-grid-column-span: 5;
-  grid-column: 2/7;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  font-size: 16px;
+  text-align: center;
+}
+
+.features .features__video {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  font-size: 16px;
+  text-align: center;
+}
+
+.features .features__aperture {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  font-size: 16px;
+}
+
+.features .features__hyper {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  font-size: 16px;
+  text-align: center;
+}
+
+.features .features__dlog {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  font-size: 16px;
+  text-align: center;
+}
+
+main .buttons {
+  -ms-grid-row: 7;
+  -ms-grid-row-span: 1;
+  grid-row: 7/8;
+  -ms-grid-column: 15;
+  -ms-grid-column-span: 2;
+  grid-column: 15/17;
 }
 
 .leftNavigation {

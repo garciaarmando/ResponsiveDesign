@@ -6,12 +6,14 @@ $secondaryColor: #ff6a3f;
 $mainColor: #ffffff;
 $fontColor: #000000;
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-family: $mainFont;
     margin: 0;
     color: $fontColor;
     display: grid;
+    align-content: center;
+    justify-content: center;
     grid-template-columns: 20% 80%;
     grid-template-rows: 20% 80%;
     /* Verificar que hacia el final y sin la existencia del grid implícito esto siga funcionando OK */
@@ -76,6 +78,8 @@ nav .nav__icon {
 header nav a {
     text-decoration: none;
     color: $fontColor;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 main {
@@ -88,9 +92,120 @@ main {
     grid-template-columns: 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5% 5.5%;
 }
 
-.main__section {
+main .main__section {
+    width: 100%;
+    height: 100%;
+    grid-row: 1/4;
+    grid-column: 2/10;
+}
+
+.main__section .main__description {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 20% 80%;
+    color: $fontColor;
+    align-items: center;
+}
+
+.main__description .main__description__title {
+    grid-row: 1/2;
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main__description .description_paragraph {
+    font-size: 15px;
     grid-row: 2/3;
+    font-size: 16px;
+}
+
+main .main__price {
+    grid-row: 4/6;
     grid-column: 2/7;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 40% 60%;
+}
+
+.main__price .main__price-amount {
+    font-size: 20px;
+    font-weight: bold;
+    grid-row: 1/2;
+    width: 100%;
+}
+
+.main__price .main__price-shipping {
+    grid-row: 2/3;
+    font-size: 15px;
+    width: 100%;
+    font-size: 16px;
+}
+
+main .features {
+    width: 100%;
+    height: 100%;
+    grid-row: 6/9;
+    grid-column: 2/12;
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: repeat(3, 33.3%);
+    align-items: center;
+}
+
+.features .features__title {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.features .features__camera {
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: 16px;
+}
+
+.features .features__sensor {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.features .features__video {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    font-size: 16px;
+    text-align: center;
+}
+
+.features .features__aperture {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    font-size: 16px;
+}
+
+.features .features__hyper {
+    grid-row: 3/4;
+    grid-column: 2/3;
+    font-size: 16px;
+    text-align: center;
+}
+
+.features .features__dlog {
+    grid-row: 3/4;
+    grid-column: 3/4;
+    font-size: 16px;
+    text-align: center;
+}
+
+main .buttons {
+    grid-row: 7/8;
+    grid-column: 15/17;
 }
 
 .leftNavigation {
